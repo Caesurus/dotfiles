@@ -35,6 +35,29 @@ popd >/dev/null
 # Install vim plugins
 vim +'PlugInstall --sync' +qa
 
+
+# configure TMUX local
+pushd $HOME >/dev/null
+ln -s -f .tmux/.tmux.conf 
+cp .tmux/.tmux.conf.local .
+sed -i 's/tmux_conf_copy_to_os_clipboard=false/tmux_conf_copy_to_os_clipboard=true/' .tmux.conf.local
+cat <<EOF >> .tmux.conf.local
+set -g history-limit 10000
+set -g mouse on
+set -g status-keys vi
+set -g mode-keys vi
+
+set -gu prefix2
+unbind C-a
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
+
+EOF
+popd >/dev/null
+
+
+
 # Install bash aliases
 if ! grep -q bash_aliases $HOME/.bashrc; then
     echo "# Set up aliases" >> $HOME/.bashrc
