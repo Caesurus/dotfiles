@@ -88,33 +88,33 @@ autocmd BufReadPost *
   \ endif
 
 " Disable arrow keys for navigation
-:nnoremap <up> <nop>
-:nnoremap <down> <nop>
-:nnoremap <left> <nop>
-:nnoremap <right> <nop>
+":nnoremap <up> <nop>
+":nnoremap <down> <nop>
+":nnoremap <left> <nop>
+":nnoremap <right> <nop>
 
 " Make j and k move up and down better for wrapped lines
-:noremap k gk
-:noremap j gj
-:noremap gk k
-:noremap gj j
+":noremap k gk
+":noremap j gj
+":noremap gk k
+":noremap gj j
 
 " Ctrl-<hjkl> to change splits
-:noremap <C-h> <C-w>h
-:noremap <C-j> <C-w>j
-:noremap <C-k> <C-w>k
-:noremap <C-l> <C-w>l
+":noremap <C-h> <C-w>h
+":noremap <C-j> <C-w>j
+":noremap <C-k> <C-w>k
+":noremap <C-l> <C-w>l
 
 " <Tab> to cycle through splits
-:noremap <Tab> <C-w>w
+":noremap <Tab> <C-w>w
 
 " Close the current split
-:nmap <leader>x <C-w>c
+":nmap <leader>x <C-w>c
 
 " Jumping between buffers
-:noremap <C-n> :bnext<CR>
-:noremap <C-p> :bprev<CR>
-:noremap <C-e> :b#<CR>
+":noremap <C-n> :bnext<CR>
+":noremap <C-p> :bprev<CR>
+":noremap <C-e> :b#<CR>
 
 " Let <C-n> and <C-p> also filter through command history
 :cnoremap <C-n> <Down>

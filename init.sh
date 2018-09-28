@@ -37,9 +37,9 @@ vim +'PlugInstall --sync' +qa
 
 
 # configure TMUX local
-pushd $HOME >/dev/null
-ln -s -f .tmux/.tmux.conf 
-cp .tmux/.tmux.conf.local .
+pushd ${HOME} >/dev/null
+ln -s -f ${DIR}/.tmux/.tmux.conf
+cp ${DIR}/.tmux/.tmux.conf.local .
 sed -i 's/tmux_conf_copy_to_os_clipboard=false/tmux_conf_copy_to_os_clipboard=true/' .tmux.conf.local
 cat <<EOF >> .tmux.conf.local
 set -g history-limit 10000
